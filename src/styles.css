@@ -1,19 +1,16 @@
-.btn{
-    font-size: 30px;
+@media screen and (min-width: 1280px){
+    .gar{
+    font-size: 1.5vw;
+    text-align: center;
+    }
 }
-.form:focus{
-    color: purple;
-    background-color: darkorange;
+@media screen and (max-width: 600px){
+    .gar{
+    font-size: 10px;
+    text-align: center;
+    }
 }
-.form{
-    font-size: 15px;
-}
-#date{
-    font-size: 20px;
-}
-.btn:hover{
-    background-color: orange;
-}
-.logo{
-    padding: 20px
+.gar{
+    text-align: center;
+    grid-template-columns: 100px 100px 100px;
 }
