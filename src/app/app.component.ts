@@ -14,11 +14,12 @@ export class AppComponent {
   errorMes:string;
   fop:string;
   
+  
   doCalc() {
   if (this.firstOp != null && this.secondOp != null && this.op != null) {
      if(this.op =="&&" && this.fop =="!"){
       this.result = this.firstOp && this.secondOp;
-      this.result = !this.result;
+      
       this.errorMes = "Ошибок нет";}
      else if (this.op == "&&"){
         this.result = this.firstOp && this.secondOp;
@@ -26,12 +27,12 @@ export class AppComponent {
       }
       else if (this.op =="&&" && this.fop =="!"){
         this.result = this.firstOp && this.secondOp;
-        this.result = !this.result;
+       
         this.errorMes = "Ошибок нет";
       }
       else if (this.op =="||" && this.fop =="!"){
         this.result = this.firstOp || this.secondOp;
-        this.result = !this.result;
+       
         this.errorMes = "Ошибок нет";
       }
        else if (this.op =="||") { 
