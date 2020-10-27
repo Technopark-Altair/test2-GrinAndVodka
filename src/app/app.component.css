@@ -1,0 +1,10 @@
+@media screen and (max-width: 600px){
+    .gar{
+        font-size: 1vw;
+        text-align:center;
+    }
+}
+.gar{
+    font-size: xx-large;
+    text-align: center;
+}

@@ -12,25 +12,30 @@ export class AppComponent {
   op:string;
   result:number;
   errorMes:string;
+  fop:string;
   
   doCalc() {
   if (this.firstOp != null && this.secondOp != null && this.op != null) {
-      if (this.op == "-") {
-        this.result = this.firstOp - this.secondOp;
+     if(this.op =="&&" && this.fop =="!"){
+      this.result = this.firstOp && this.secondOp;
+      this.result = !this.result;
+      this.errorMes = "Ошибок нет";}
+     else if (this.op == "&&"){
+        this.result = this.firstOp && this.secondOp;
         this.errorMes = "Ошибок нет";
-      } else if (this.op =="+") { 
-        this.result = this.firstOp + this.secondOp;
+      }
+      else if (this.op =="&&" && this.fop =="!"){
+        this.result = this.firstOp && this.secondOp;
+        this.result = !this.result;
         this.errorMes = "Ошибок нет";
-      } else if(this.op =="/") {
-        if (this.secondOp == 0) {
-          this.errorMes ="На ноль нельзя делить";
-          this.result == null;
-        }else {
-          this.result = this.firstOp / this.secondOp;
-          this.errorMes = "Ошибок нет";
-        }
-      } else if(this.op =="*") {
-        this.result = this.firstOp * this.secondOp;
+      }
+      else if (this.op =="||" && this.fop =="!"){
+        this.result = this.firstOp || this.secondOp;
+        this.result = !this.result;
+        this.errorMes = "Ошибок нет";
+      }
+       else if (this.op =="||") { 
+        this.result = this.firstOp || this.secondOp;
         this.errorMes = "Ошибок нет";
       }
     }else{

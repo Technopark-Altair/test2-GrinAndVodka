@@ -1,11 +1,13 @@
 <div class="gar">
     <h1>Калькулятор</h1>
+    <select id="op" [(ngModel)]="fop">
+        <option value="!">!</option>
+        <option value=" "> </option>
+    </select>
     <input id="firstOp" [(ngModel)]="firstOp" type="number">
     <select id="op" [(ngModel)]="op">
-        <option value="-">-</option>
-        <option value="+">+</option>
-        <option value="/">/</option>
-        <option value="*">*</option>
+        <option value="||">||</option>
+        <option value="&&">&&</option>
     </select>
     <input id="secondOp" [(ngModel)]="secondOp" type="number">
     <input (click)="doCalc()" type="submit" value="Подтвердить">
